@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Pramod Hegde</Authors>
+    <Company>Pramod Hegde</Company>
+    <Product>$(AssemblyName)</Product>
+    <Version>1.0.0</Version>
+    <PackageId>Services.Core.FaultHandling</PackageId>
+    <Configurations>Debug;Release;PREVIEW</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Services.Core.Contracts\Services.Core.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

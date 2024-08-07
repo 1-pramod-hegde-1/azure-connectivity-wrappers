@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Pramod Hegde</Authors>
+    <Product>$(AssemblyName)</Product>
+    <Version>1.0.0</Version>
+    <PackageId>Services.Core.CacheHandler</PackageId>
+    <Company>Pramod Hegde</Company>
+    <Configurations>Debug;Release;PREVIEW</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MemoryCache\**" />
+    <EmbeddedResource Remove="MemoryCache\**" />
+    <None Remove="MemoryCache\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <ProjectReference Include="..\Services.Core.Common\Services.Core.Common.csproj" />
+    
+    <ProjectReference Include="..\Services.Core.Composition\Services.Core.Composition.csproj" />
+    
+    <ProjectReference Include="..\Services.Core.Contracts\Services.Core.Contracts.csproj" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="CacheResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CacheResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="CacheResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CacheResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

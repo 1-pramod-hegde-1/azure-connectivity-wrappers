@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <PackageId>Services.Core.MonitoringElements</PackageId>
+    <Authors>Pramod Hegde</Authors>
+    <Company>Pramod Hegde</Company>
+    <Configurations>Debug;Release;PREVIEW</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SqlMonitor.cs~RF29865cdd.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.8.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Security.Cryptography.X509Certificates" Version="4.3.2" />
+    <PackageReference Include="Warden" Version="2.0.0" />
+    <PackageReference Include="Warden.Integrations.HttpApi" Version="2.0.0" />
+    <PackageReference Include="Warden.Services" Version="1.0.0" />
+    <PackageReference Include="Warden.Shared" Version="1.0.0" />
+    <PackageReference Include="Warden.Watchers.AzureServiceBus" Version="1.3.1" />
+    <PackageReference Include="Warden.Watchers.AzureStorage" Version="1.3.1" />
+    <PackageReference Include="Warden.Watchers.Disk" Version="2.0.0" />
+    <PackageReference Include="Warden.Watchers.MsSql" Version="2.0.0" />
+    <PackageReference Include="Warden.Watchers.Performance" Version="1.3.1" />
+    <PackageReference Include="Warden.Watchers.Redis" Version="2.0.0" />
+    <PackageReference Include="Warden.Watchers.Web" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+       
+    <ProjectReference Include="..\Services.Cache.Contracts\Services.Cache.Contracts.csproj" />
+       
+    <ProjectReference Include="..\Services.Communication.Http\Services.Communication.Http.csproj" />
+    
+    <ProjectReference Include="..\Services.Core.Contracts\Services.Core.Contracts.csproj" />
+    
+    <ProjectReference Include="..\Services.Data.Common\Services.Data.Common.csproj" />
+  </ItemGroup>
+
+</Project>
