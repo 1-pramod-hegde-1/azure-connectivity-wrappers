@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageId>Services.Integration.CosmosDb</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Pramod Hegde</Authors>
+		<Company>Pramod Hegde</Company>
+		<Product>$(AssemblyName)</Product>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Configurations>Debug;Release;PREVIEW</Configurations>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.22.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Core\Services.Core.Logging\Services.Core.Logging.csproj" />
+		<ProjectReference Include="..\Core\Services.Data.CosmosDb\Services.Data.CosmosDb.csproj" />
+		<ProjectReference Include="..\Services.Integration.Core\Services.Integration.Core.csproj" />
+	</ItemGroup>
+
+</Project>

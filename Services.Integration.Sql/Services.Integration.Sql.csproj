@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<LangVersion>8.0</LangVersion>
+	<PackageId>Services.Integration.Sql</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>Pramod Hegde</Authors>
+	<Company>Pramod Hegde</Company>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Product>$(AssemblyName)</Product>
+	<Configurations>Debug;Release;PREVIEW</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Services.Core.Logging\Services.Core.Logging.csproj" />
+    <ProjectReference Include="..\Services.Integration.Core\Services.Integration.Core.csproj" />
+  </ItemGroup>
+
+</Project>

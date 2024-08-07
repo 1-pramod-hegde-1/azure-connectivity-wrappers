@@ -1,0 +1,11 @@
+# Ignore bin directory
+bin/
+
+# Ignore obj directory
+obj/
+
+# Ignore packages directory
+packages/
+ 
+# Ignore packages directory
+.vs/
